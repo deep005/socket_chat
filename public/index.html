@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Websocket 101</title>
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Here I am</h1>
+    <div id="mario-chat">
+        <div id="chat-window">
+            <div id="output">
+
+            </div>
+        </div>
+        <input type="text" id="handle" placeholder="Handle">
+        <input type="text" id="message" placeholder="Message">
+        <button id="send">Send</button>
+    </div>
+    <script src="chat.js"></script>
 </body>
 </html>
