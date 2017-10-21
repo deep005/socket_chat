@@ -1,10 +1,10 @@
-let express = require('express');
-let socket = require('socket.io');
+var express = require('express');
+var socket = require('socket.io');
 
 
-let app = express();
+var app = express();
 
-let server = app.listen(4000, ()=>{
+var server = app.listen(4000, function(){
        console.log('listening to port 4000');
 });
 
@@ -12,7 +12,7 @@ let server = app.listen(4000, ()=>{
 app.use(express.static('public'));
 
 // socket setup
-let io = socket(server);
+var io = socket(server);
 
 io.on('connection', function(socket){
        console.log('made socket connection', socket.id);
